@@ -17,10 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework import routers, serializers, viewsets
-from todolistapp.views import UserViewSet
+from todolistapp.views import UserViewSet, TaskViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
+router.register(r'tasks', TaskViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
